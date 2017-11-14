@@ -8,7 +8,7 @@ TestFixture.prototype.setup = function() {
 };
 
 const test = new TestFixture();
-describe.skip('SESService', function() {
+describe('SESService', function() {
   describe('substages', () => {
     beforeEach(() => test.setup());
 

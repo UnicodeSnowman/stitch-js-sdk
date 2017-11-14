@@ -97,12 +97,17 @@ function serviceResponse(service, stages, finalizer) {
   Object.defineProperties(stages, {
     then: {
       enumerable: false, writable: false, configurable: false,
-      value: (resolve, reject) =>
-        client.executePipeline(Array.isArray(stages) ? stages : [ stages ], {finalizer}).then(resolve, reject)
+      value: (resolve, reject) => {
+        // TODO call service action directly
+        //client.executePipeline(Array.isArray(stages) ? stages : [ stages ], {finalizer}).then(resolve, reject)
+      }
     },
     catch: {
       enumerable: false, writable: false, configurable: false,
-      value: (rejected) => client.executePipeline(Array.isArray(stages) ? stages : [ stages ],  {finalizer}).catch(rejected)
+      value: (rejected) => {
+        // TODO call service action directly
+        //client.executePipeline(Array.isArray(stages) ? stages : [ stages ],  {finalizer}).catch(rejected)
+      }
     },
     withLet: {
       enumerable: false, writable: true, configurable: true,

@@ -8,7 +8,7 @@ TestFixture.prototype.setup = function() {
 };
 
 const test = new TestFixture();
-describe.skip('PubnubService', function() {
+describe('PubnubService', function() {
   describe('substages', () => {
     beforeEach(() => test.setup());
 
