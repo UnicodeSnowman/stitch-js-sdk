@@ -16,7 +16,6 @@ import {
 
 const EJSON = new ExtJSONModule();
 
-const v1 = 1;
 const v2 = 2;
 const v3 = 3;
 
@@ -42,14 +41,6 @@ export default class StitchClient {
     );
 
     this.rootURLsByAPIVersion = {
-      [v1]: {
-        public: `${baseUrl}/api/public/v1.0`,
-        client: `${baseUrl}/api/client/v1.0`,
-        private: `${baseUrl}/api/private/v1.0`,
-        app: (clientAppID ?
-              `${baseUrl}/api/client/v1.0/app/${clientAppID}` :
-              `${baseUrl}/api/public/v1.0`)
-      },
       [v2]: {
         public: `${baseUrl}/api/public/v2.0`,
         client: `${baseUrl}/api/client/v2.0`,
